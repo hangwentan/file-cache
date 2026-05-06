@@ -72,7 +72,7 @@ func initRedis() {
 	redisClient = redis.NewClient(&redis.Options{
 		Addr:     "192.168.1.122:32768",
 		Password: "",
-		DB:       2,
+		DB:       0,
 	})
 	if err := redisClient.Ping(ctx).Err(); err != nil {
 		panic("Redis连接失败: " + err.Error())
